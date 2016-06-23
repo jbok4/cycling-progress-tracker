@@ -1,0 +1,7 @@
+<h1><%=@cyclist.username%> Recent Rides:</h1>
+<% @cyclist.title.each do |ride| %>
+  <p><%=@cyclist.username%></p>
+  <p><%=ride.title%>:</p>
+  <p><%=ride.distance%> miles</p>
+  <br/>
+<% end %>
