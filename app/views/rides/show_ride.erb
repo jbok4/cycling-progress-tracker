@@ -1,0 +1,6 @@
+<%= @ride.title %>&nbsp;&nbsp;<%= @ride.distance %>&nbsp;&nbsp;<a href="/rides/<%= @ride.id%>/edit">Edit Your Ride Details</a>
+
+<form method="POST" action="/rides/<%= @ride.id %>/delete">
+  <input id="hidden" type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="Delete Ride">
+</form>

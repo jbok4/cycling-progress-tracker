@@ -1,0 +1,9 @@
+Welcome, <%= @cyclist.username %>. &nbsp;<a href="/rides/new">Add a New Ride</a>&nbsp;&nbsp;<a href="/logout">Log Out</a>
+<br>
+
+<h3>What's news?</h3>
+<ul>
+  <% @rides.each do |ride| %>
+    <li><a href="/cyclists/<%= ride.cyclist.slug %>"><%= ride.cyclist.username %></a> says: <%= ride.title %><%= ride.distance %> miles! &nbsp;<br><a href="/rides/<%= ride.id %>/edit">Edit</a>&nbsp;<a href="/rides/<%= ride.id %>">Delete</a></li>
+  <% end %>
+</ul>
