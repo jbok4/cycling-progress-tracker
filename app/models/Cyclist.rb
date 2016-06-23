@@ -8,7 +8,7 @@ class Cyclist < ActiveRecord::Base
   end
 
   def self.find_by_slug(slug)
-    User.all.find{|user| user.slug == slug}
+    Cyclist.all.find{|cyclist| cyclist.slug == slug}
   end
 
 end
