@@ -29,7 +29,7 @@ class ApplicationController < Sinatra::Base
       @cyclist.save
       session[:cyclist_id] = @cyclist.id
       redirect "/rides"
- rides
+    end
   end
 
   get '/login' do
@@ -150,7 +150,7 @@ class ApplicationController < Sinatra::Base
     def current_cyclist
       Cyclist.find(session[:cyclist_id])
     end
-  end
 
+  end
 
 end
