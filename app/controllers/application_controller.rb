@@ -100,7 +100,7 @@ class ApplicationController < Sinatra::Base
       redirect "/rides"
     end
     else
-      redirect "/login"
+      redirect "/login", locals: {message: "You can only edit your own rides."}
     end
   end
 
