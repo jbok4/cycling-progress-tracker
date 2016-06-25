@@ -1,9 +1,9 @@
-Welcome, <%= @cyclist.username %>. &nbsp;<a href="/rides/new">Add a New Ride</a>&nbsp;&nbsp;<a href="/logout">Log Out</a>
+<p>Welcome, <%= @cyclist.username %>. &nbsp;</p><a href="/rides/new">Add a New Ride</a>&nbsp;  |  &nbsp;<a href="/logout">Log Out</a>
 <br>
 
-<h3 style="font-family:courier;">Who's ridden the farthest?</h3>
+<h1>Who's ridden the farthest?</h1>
 <ul>
   <% @rides.each do |ride| %>
-    <br><li style="font-family:courier;"><a href="/cyclists/<%= ride.cyclist.slug %>"><%= ride.title %></a><p style="color:red;"><%= ride.cyclist.username %>   <%= ride.distance %> miles &nbsp;<a href="/rides/<%= ride.id %>/edit">    Edit</a>&nbsp;<a href="/rides/<%= ride.id %>">  Delete</p></a></li>
+    <br><li><a href="/cyclists/<%= ride.cyclist.slug %>"><%= ride.title %></a><p style="color:red;"><%= ride.cyclist.username %>:   <%= ride.distance %> miles &nbsp;<a href="/rides/<%= ride.id %>/edit">    Edit</a>&nbsp;<a href="/rides/<%= ride.id %>">  Delete</p></a></li>
   <% end %>
 </ul>

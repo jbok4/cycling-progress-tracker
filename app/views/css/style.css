@@ -1,0 +1,63 @@
+@font-face {
+  font-family: 'WalkDaWalkOne';
+  src: url(../fonts/WalkDaWalkOne.ttf);
+}
+
+@font-face {
+  font-family: 'MARSNEVENEKSK';
+  src: url(../fonts/MARSNEVENEKSK.otf);
+}
+
+body {
+  padding: 30px 30px 60px;
+}
+
+.background {
+  position: fixed;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  min-height: 100%;
+}
+
+p {
+  text-align: center;
+  color: #efefef;
+  line-height: 0.82em;
+  font-family: courier;
+  font-weight: normal;
+  font-size: 25em;
+  text-align: left;
+}
+
+.row:nth-child(3) {
+  background: #fff;
+}
+
+main {
+  padding: 30px 0;
+}
+
+h1 {
+  float: left;
+  color: yellow;
+  font-family: script;
+  font-weight: normal;
+  font-size: 5em;
+  line-height: 0.4em;
+  margin-bottom: 60px;
+}
+
+h2 {
+  font-family: courier;
+}
+
+ul.nav {
+  clear: both;
+  margin-top: 30px;
+}
+
+header img {
+  float: right;
+}

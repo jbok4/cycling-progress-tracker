@@ -1,7 +1,8 @@
-<h1><%=@cyclist.username%> Recent Rides:</h1>
+<h1><%=@cyclist.username.capitalize%>'s Recent Rides:</h1>
 <% @cyclist.rides.each do |ride| %>
-  <p><%=@cyclist.username%></p>
+<div style="margin:20px">
+
   <p><%=ride.title%>:</p>
-  <p><%=ride.distance%> miles</p>
-  <br/>
+  <p style="color:red"><%=ride.distance%> miles</p>
+</div>
 <% end %>
