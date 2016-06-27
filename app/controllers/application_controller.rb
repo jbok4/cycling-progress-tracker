@@ -17,7 +17,7 @@ class ApplicationController < Sinatra::Base
      if logged_in? 
       redirect "/rides"
     else
-      redirect "/failure"
+      erb :'/cyclists/create_cyclist'
     end
   end
 
