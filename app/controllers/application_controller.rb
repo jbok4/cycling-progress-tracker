@@ -97,7 +97,7 @@ class ApplicationController < Sinatra::Base
     if session[:cyclist_id] == @ride.cyclist_id
       erb :'/rides/edit_ride'
     else
-      redirect "/rides"
+      redirect "/rides", :alert => "You haz errors!"
     end
     else
       redirect "/login", locals: {message: "You can only edit your own rides."}
@@ -108,7 +108,7 @@ class ApplicationController < Sinatra::Base
     if params[:title] == ""
       redirect to "/rides/#{params[:id]}/edit"
     else
-      @ride = Rides.find_by_id(params[:id])
+      @ride = Ride.find_by_id(params[:id])
       @ride.title = params[:title]
       @ride.distance = params[:distance]
       @ride.save
