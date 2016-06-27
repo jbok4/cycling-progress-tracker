@@ -17,7 +17,7 @@ class ApplicationController < Sinatra::Base
      if logged_in? 
       redirect "/rides"
     else
-      erb :'/cyclists/create_cyclist', locals: {message: "Please sign up before you sign in"}
+      redirect "/failure"
     end
   end
 
@@ -97,10 +97,10 @@ class ApplicationController < Sinatra::Base
     if session[:cyclist_id] == @ride.cyclist_id
       erb :'/rides/edit_ride'
     else
-      redirect "/rides", :alert => "You haz errors!"
+      redirect "/error"
     end
     else
-      redirect "/login", locals: {message: "You can only edit your own rides."}
+      redirect '/login'
     end
   end
 
@@ -120,9 +120,9 @@ class ApplicationController < Sinatra::Base
     @ride = Ride.find(params[:id])
     if current_cyclist == @ride.cyclist && logged_in?
       @ride.delete
-      redirect '/rides'
+      redirect "/rides"
     else
-      redirect '/login'
+      redirect '/error'
     end
   end
 
@@ -138,6 +138,14 @@ class ApplicationController < Sinatra::Base
     else
       redirect '/'
     end
+  end
+
+  get '/failure' do
+    erb :'/cyclists/failure'
+  end
+
+  get '/error' do
+    erb :'/cyclists/error'
   end
 
   
