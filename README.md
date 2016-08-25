@@ -4,19 +4,6 @@ This project is supported by Bundler and includes a `Gemfile`.
 
 Run 'bundle install' before getting started. Then run 'rake db:migrate' followed by 'shotgun' and you can view and interact with the project via localhost:9393 in your browser. Enjoy!
 
-## Objectives
-
-1. Build a full scale Sinatra application that uses:
-
-+ A sqlite database
-+ ActiveRecord
-+ Multiple Models
-+ At least one has_many relationship
-+ User accounts. The user that created a given piece of content should be the only person who can modify that content
-+ Validation of user input to ensure that bad data isn't created
-+ Any validation failures must be shown to the user with an error message
-+ Login/Logout
-
 ## Overview
 
 The goal of this project is to build a hub where fellow cyclists can share their updates and newest ride info.
