@@ -8,7 +8,7 @@ Run 'bundle install' before getting started. Then run 'rake db:migrate' followed
 
 The goal of this project is to build a hub where fellow cyclists can share their updates and newest ride info.
 
-A user cannot take any actions (except sign-up), unless they are logged in. Once a user is logged in, they should be able to create, edit and delete their own rides, as well as view all the rides.
+A user cannot take any actions (except sign-up), unless they are logged in. Once a user is logged in, they should be able to create, edit and delete their own rides while keeping track of their previous rides, as well as view all the rides by their friends.
 
 ### File Structure
 
