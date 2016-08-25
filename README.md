@@ -49,8 +49,12 @@ A user cannot take any actions (except sign-up), unless they are logged in. Once
 │   │   └── create_rides.rb
 │   ├── schema.rb
 
+#### License
 
-### environment.rb
+The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+
+
+##### environment.rb
 
 As this project has quite a few files, an `environment.rb` is included that loads all the code in your project along with Bundler. You do not ever need to edit this file. When you see require_relative `../config/environment`, that is how your environment and code are loaded.
 
