@@ -10,7 +10,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/' do
-    erb :index
+    erb(:index)
   end
 
   get '/signup' do
@@ -73,8 +73,7 @@ class ApplicationController < Sinatra::Base
       if params[:title].empty?
         redirect '/rides/new'
       else
-        @ride = Ride.new(title: params[:title], distance: params[:distance], cyclist_id: session[:cyclist_id])
-        @ride.save
+        @ride = current_cyclist.rides.create(title: params[:title], distance: params[:distance])
         redirect "/rides"
       end
     else
@@ -156,7 +155,7 @@ class ApplicationController < Sinatra::Base
     end
 
     def current_cyclist
-      Cyclist.find(session[:cyclist_id])
+      @cyclist ||= Cyclist.find(session[:cyclist_id])
     end
 
   end
